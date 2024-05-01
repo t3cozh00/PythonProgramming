@@ -11,12 +11,12 @@ while True:
         print('Notebook shutting down, thank you.')
         break
     elif choice == 1:
-        myfile = open('notebook.txt', 'r')
+        myfile = open('notebook1.txt', 'r')
         choice1 = myfile.read()
         print(choice1)
         myfile.close()
     elif choice == 2:
         addtext = input("Write a new note: ")
         myfile = open("notebook.txt", "a")
-        myfile.write(addtext + ':::' + time.strftime("%X %x"))
+        myfile.write(addtext + ':::' + time.strftime("%X %x") + '\n')
         myfile.close()
